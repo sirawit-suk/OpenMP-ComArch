@@ -10,7 +10,7 @@ build:
 
 # change thread type "make thread t=number"
 thread:
-	OMP_NUM_THREADS=$(t)
+	export OMP_NUM_THREADS=$(t)
 
 clean:
 	rm ./COUNT

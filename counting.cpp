@@ -4,7 +4,7 @@
 #include <string.h>
 #include <time.h>
 
-#define max_num 100000
+#define max_num 200000
 int n;
 int a[max_num], sorted[max_num];
 
@@ -40,6 +40,7 @@ void parallel() {
     printf("Parallel time: %f s\n", time_used);
 }
 
+/*
 void serial() {
     int i, j, count;
     double start_time = omp_get_wtime();
@@ -58,13 +59,14 @@ void serial() {
     double time_used = end_time - start_time;
     printf("\nSerial time: %f s\n", time_used);
 }
+*/
 
 int main() {
     int i;
-    printf("Enter the size of the data to be sorted (max: 100000, 0 to end) : ");
+    printf("Enter the size of the data to be sorted (max: 200000, 0 to end) : ");
 
     while (scanf("%d", &n), n) {
-        if (n >= max_num) {
+        if (n > max_num) {
             puts("Data size is too large, re-enter");
             printf("\nEnter the data size to be sorted, enter 0 to end : ");
             continue;
