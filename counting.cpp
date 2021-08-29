@@ -61,19 +61,25 @@ void serial() {
 
 int main() {
     int i;
-    printf("Enter the size of the data to be sorted (the maximum value is 100000, enter 0 to end) : ");
+    printf("Enter the size of the data to be sorted (max: 100000, 0 to end) : ");
+
     while (scanf("%d", &n), n) {
         if (n >= max_num) {
             puts("Data size is too large, re-enter");
+            printf("\nEnter the data size to be sorted, enter 0 to end : ");
             continue;
         }
         generate();
         parallel();
-        serial();
+        //serial();
+        
+        //Add this line
+        break;
+        
         //for (i = 0; i <n; i ++) 
         //printf("%d ", sorted[i]);
 
-        printf("\nEnter the data size to be sorted, enter 0 to end : ");
+        
     }
     return 0;
 }
