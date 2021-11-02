@@ -71,12 +71,16 @@ void serial() {
 }
 */
 
-int main() {
+int main(int argc, char* argv[]) {
     int i;
+    int thread = atoi(argv[1]);
+    n = atoi(argv[2]);
     
+    omp_set_num_threads(thread);
+    
+    printf("Avaliable %d Threads now\n",omp_get_max_threads());
     printf("Enter the size of the data to be sorted (max: 200000, 0 to end) : ");
-    printf("%d xxx",omp_get_num_threads());
-    while (scanf("%d", &n), n) {
+    while (n) {
         if (n > max_num) {
             puts("Data size is too large, re-enter");
             printf("\nEnter the data size to be sorted, enter 0 to end : ");
@@ -92,7 +96,6 @@ int main() {
         //for (i = 0; i <n; i ++) 
         //printf("%d ", sorted[i]);
 
-        
     }
     return 0;
 }

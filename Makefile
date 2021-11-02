@@ -2,7 +2,7 @@
 all: build run
 
 run:
-	sudo perf stat -r 5 -e cpu-cycles,instructions,cache-references,cache-misses,dTLB-loads,dTLB-load-misses,dTLB-stores,dTLB-store-misses,iTLB-loads,iTLB-load-misses,branch-loads,branch-load-misses ./COUNT 
+	sudo perf stat -r 5 -e cpu-cycles,instructions,cache-references,cache-misses,dTLB-loads,dTLB-load-misses,dTLB-stores,dTLB-store-misses,iTLB-loads,iTLB-load-misses,branch-loads,branch-load-misses ./COUNT $(t) $(n) 
 
 # -fopenmp mean running in parallel
 build:

@@ -10,12 +10,11 @@ https://stackoverflow.com/questions/39903181/can-you-do-a-parallel-counting-sort
 
 How to use:
 - Run file "make" or "make all"
-- Change Thread "make thread t=1"
 
 Makefile
 - all: build, run all executable program
 - run: execute perf and program
 - build: compile new file
 - clean: remove .elf file (.elf is the .exe(window) in linux)(Doesn't necessary)
-- thread: change software OPEN-MP thread type "make thread t=1"
+- (Obsolete) thread: change software OPEN-MP thread type "make thread t=1" (Not use because can't change threads -> use function omp_set_thread_num(num x);)
 
