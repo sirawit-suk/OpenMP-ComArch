@@ -63,8 +63,9 @@ void serial() {
 
 int main() {
     int i;
+    
     printf("Enter the size of the data to be sorted (max: 200000, 0 to end) : ");
-
+    printf("%d xxx",omp_get_num_threads());
     while (scanf("%d", &n), n) {
         if (n > max_num) {
             puts("Data size is too large, re-enter");
