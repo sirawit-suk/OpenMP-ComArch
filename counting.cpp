@@ -73,7 +73,7 @@ void serial() {
 
 int main(int argc, char* argv[]) {
     int i;
-    int thread = atoi(argv[1]);
+    int thread = atoi(argv[1]); // convert string to int
     n = atoi(argv[2]);
     
     omp_set_num_threads(thread);
