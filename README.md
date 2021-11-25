@@ -1,6 +1,6 @@
 # OpenMP-ComArch
 
-### This is CountingSort algorithm use OpenMP (For running in parallel for optimization)
+### This is CountingSort algorithm using OpenMP (For running in parallel for optimization)
 
 Source Code: [Original reference (Nickson Joram)](
 https://medium.com/geekculture/implementation-and-performance-analysis-of-parallel-and-serial-counting-sort-algorithm-using-openmp-56016f9ccb5c)
